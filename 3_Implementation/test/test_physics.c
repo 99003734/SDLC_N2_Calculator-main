@@ -1,8 +1,8 @@
 #include "unity.h"
 #include <physics.h>
+#include <profitloss.h>
 
 /* Modify these two lines according to the project */
-#include <physics.h>
 #define PROJECT_NAME    "Calculator"
 
 /* Prototypes for all the test functions 
@@ -16,6 +16,9 @@ void test_capacitive_rec(void);
 void test_circular_velocity(void);
 void test_gravitation_force(void);
 void test_projectile_motion(void);
+
+void test_cal_profit(void);
+void test_discount(void);
 
 /* Required by the unity test framework */
 void setUp(){}
@@ -34,9 +37,15 @@ int main()
   RUN_TEST(test_circular_velocity);
   RUN_TEST(test_gravitation_force);
   RUN_TEST(test_projectile_motion);
-  
+  RUN_TEST(test_cal_profit);
+  RUN_TEST(test_discount);
   
   /* Close the Unity Test Framework */
+
+
+  
+
+
   return UNITY_END();
 }
 
@@ -75,4 +84,17 @@ void test_projectile_motion(void) {
   
   /* Dummy fail*/
   TEST_ASSERT_EQUAL(80, projectile_motion(25,45));
+}
+
+void test_cal_profit(void)
+{
+  TEST_ASSERT_EQUAL(147, cal_profit(200, 53));
+  TEST_ASSERT_EQUAL(15, cal_profit(20, 5));
+}
+void test_discount(void) {
+	
+	
+  TEST_ASSERT_EQUAL(450, discount(500, 10));
+  /* Dummy fail*/
+  TEST_ASSERT_EQUAL(100, discount(120, 5));
 }

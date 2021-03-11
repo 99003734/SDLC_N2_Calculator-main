@@ -8,6 +8,7 @@ BUILD = build
 SRC = src/Calculator.c\
 src/physics.c\
 test/test_physics.c\
+src/Profitloss.c\
 unity/unity.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
