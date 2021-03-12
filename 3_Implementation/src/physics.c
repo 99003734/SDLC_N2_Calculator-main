@@ -34,9 +34,9 @@ double gravitation_force(float M1, float M2, float D)
     return force;
 }
 
-double projectile_motion(float V, float angle)
-{
-    double range;
-    range = (double) (V * V * sin(2*angle) )/ g;
-    return range;
-}
+// double projectile_motion(float V, float angle)
+// {
+//     double range;
+//     range = (double)(((V * V ) * sin(2*angle) ) / g);
+//     return range;
+// }
